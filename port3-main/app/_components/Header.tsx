@@ -73,8 +73,8 @@ export const Header = () => {
                 </Link>
                 
                 {/* Version PC */}
-                <nav className="hidden sm:flex items-center gap-2">
-                    <ul className="flex gap-6">
+                <nav className="hidden sm:flex items-center gap-4">
+                    <ul className="flex gap-12">
                         <li><Link href="/#Accueil" onClick={(e) => handleNavigation(e, '#Accueil')} className="text-[15px] hover:text-blue-500">Accueil</Link></li>
                         <li><Link href="/#Propos" onClick={(e) => handleNavigation(e, '#Propos')} className="text-[15px] hover:text-blue-500">À propos</Link></li>
                         <li><Link href="/#Competences" onClick={(e) => handleNavigation(e, '#Competences')} className="text-[15px] hover:text-blue-500">Stack technique et applications</Link></li>

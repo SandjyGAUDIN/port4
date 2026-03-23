@@ -30,7 +30,7 @@ export default function Propos() {
               Actuellement étudiant en BUT Informatique option C# et WEB à l&apos;IUT de Reims.
             </p>
             <p className="leading-relaxed">
-              Passionné d&apos;informatique et de développement, je sui un futur développeur de solutions logiciels personalisées.
+              Passionné d&apos;informatique et de développement, je suis un futur développeur de solutions logiciels personalisées.
             </p>
             <p>
               Pour toutes recommandations et conseils, n&apos;hésitez pas à me contacter.
