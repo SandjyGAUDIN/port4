@@ -5,7 +5,6 @@ import { Skills } from "./_components/Competences";
 import E5  from "./_components/E5";
 import { Footer } from "./_components/Footer";
 import { ContactSection } from "./_components/Contact";
-import VeilleTechnologique from "./_components/Veille";
 
 
 export default function Home() {
@@ -24,9 +23,6 @@ export default function Home() {
     </section>
     <section id="E5">
     <E5 />
-    </section>
-    <section id="Veille">
-      <VeilleTechnologique />
     </section>
     <section id="Contact">
     <ContactSection />
