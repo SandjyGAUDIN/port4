@@ -17,7 +17,7 @@ export default function Propos() {
                 download="Sandjy_CV.pdf"
                 className="text-sm text-blue-400 hover:text-blue-300 transition-colors" 
               >
-                Télécharger le PDF
+                Télécharger le CV
               </a>
             </div>
           </div>
@@ -60,6 +60,12 @@ export default function Propos() {
         </h4>
 
         <div className="space-y-6">
+            {/* Expérience 2 */}
+            <div className="border-l-4 border-blue-500 pl-4">
+                <h5 className="text-lg font-medium text-white">Stage 2ème année BTS SIO 2024-2025 : LICIIS (Laboratoire Informatique en Calcul Intensif et Imagerie pour la Simulation) à l&apos;URCA (Université de Reims Champagne Ardennes) à Reims</h5>
+                <p className="text-gray-300">Mise en place d&apos;une instance WorkAdventure sur leurs serveurs en local, Correction de cette instance avec documentation, création d&apos;un cahier des charges pour les fonctionnnalités demandées par le laboratoire, création et mise en place des demandes.</p>
+            </div>
+            <div className="h-px bg-gray-700 my-4"></div>
           {/* Expérience 1 */}
           <div className="border-l-4 border-blue-500 pl-4">
             <h5 className="text-lg font-medium text-white">
@@ -72,12 +78,6 @@ export default function Propos() {
 
           <div className="h-px bg-gray-700 my-4"></div>
 
-          {/* Expérience 2 */}
-          <div className="border-l-4 border-blue-500 pl-4">
-            <h5 className="text-lg font-medium text-white">Stage 2ème année BTS SIO 2024-2025 : LICIIS (Laboratoire Informatique en Calcul Intensif et Imagerie pour la Simulation) à l&apos;URCA (Université de Reims Champagne Ardennes) à Reims</h5>
-            <p className="text-gray-300">Mise en place d&apos;une instance WorkAdventure sur leurs serveurs en local, Correction de cette instance avec documentation, création d&apos;un cahier des charges pour les fonctionnnalités demandées par le laboratoire, création et mise en place des demandes.</p>
-          </div>
-          <div className="h-px bg-gray-700 my-4"></div>
             <p className="text-gray-400">2023 - 2025</p>
           </div>
       </div>
@@ -172,9 +172,6 @@ export default function Propos() {
           </p>
 
           <div className="h-px bg-gray-700 my-4"></div>
-
-          {/* Dates */}
-          <p className="text-gray-400">2020 - 2023</p>
         </div>
       </div>
     </div>
