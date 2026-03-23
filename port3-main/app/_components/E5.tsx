@@ -41,7 +41,6 @@ export default function E5() {
       ];
     return (
       <div className="min-h-screen p-30 bg-gray-900 text-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-8">projets</h2>
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-4">
           {/* <div className="md:w-4/4">
             <div className="sticky top-6">
@@ -64,7 +63,7 @@ export default function E5() {
         </div>
         <section className="bg-gray-900 py-16 px-4 md:px-8 text-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Mes Projets</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Mes réalisations</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
@@ -115,7 +114,7 @@ export default function E5() {
             href="/Projets" 
             className="text-white hover:text-blue-300 transition-colors" 
           >
-            Voir tous mes projets
+            Voir toutes mes réalisations
           </a>
           </Button>
         </div>

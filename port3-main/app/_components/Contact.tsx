@@ -121,7 +121,7 @@ export function ContactSection() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-1">Localisation</h3>
-                <p className="text-gray-400">Nice, France</p>
+                <p className="text-gray-400">Reims, France</p>
               </div>
             </div>
 

@@ -78,8 +78,7 @@ export const Header = () => {
                         <li><Link href="/#Accueil" onClick={(e) => handleNavigation(e, '#Accueil')} className="text-[15px] hover:text-blue-500">Accueil</Link></li>
                         <li><Link href="/#Propos" onClick={(e) => handleNavigation(e, '#Propos')} className="text-[15px] hover:text-blue-500">À propos</Link></li>
                         <li><Link href="/#Competences" onClick={(e) => handleNavigation(e, '#Competences')} className="text-[15px] hover:text-blue-500">Stack technique et applications</Link></li>
-                        <li><Link href="/#E5" onClick={(e) => handleNavigation(e, '#E5')} className="text-[15px] hover:text-blue-500">Projets</Link></li>
-                        <li><Link href="/#Veille" onClick={(e) => handleNavigation(e, '#Veille')} className="text-[15px] hover:text-blue-500">Veille technologique</Link></li>
+                        <li><Link href="/#E5" onClick={(e) => handleNavigation(e, '#E5')} className="text-[15px] hover:text-blue-500">Mes réalisations</Link></li>
                         <li><Link href="/#Contact" onClick={(e) => handleNavigation(e, '#Contact')} className="text-[15px] hover:text-blue-500">Contact</Link></li>
                     </ul>
                 </nav>
@@ -102,8 +101,7 @@ export const Header = () => {
                         <Link href="/#Accueil" onClick={(e) => handleNavigation(e, '#Accueil')} className="py-2 px-4 hover:bg-gray-100 rounded">Accueil</Link>
                         <Link href="/#Propos" onClick={(e) => handleNavigation(e, '#Propos')} className="py-2 px-4 hover:bg-gray-100 rounded">À propos</Link>
                         <Link href="/#Competences" onClick={(e) => handleNavigation(e, '#Competences')} className="py-2 px-4 hover:bg-gray-100 rounded">Stack technique et applications</Link>
-                        <Link href="/#E5" onClick={(e) => handleNavigation(e, '#E5')} className="py-2 px-4 hover:bg-gray-100 rounded">Fiche E5</Link>
-                        <Link href="/#Veille" onClick={(e) => handleNavigation(e, '#Veille')} className="py-2 px-4 hover:bg-gray-100 rounded">Veille technologique</Link>
+                        <Link href="/#E5" onClick={(e) => handleNavigation(e, '#E5')} className="py-2 px-4 hover:bg-gray-100 rounded">Mes réalisations</Link>
                         <Link href="/#Contact" onClick={(e) => handleNavigation(e, '#Contact')} className="py-2 px-4 hover:bg-gray-100 rounded">Contact</Link>
                         <Button variant="outline" className="mt-2">
                             <GithubIcon size={16} className="mr-2" />
