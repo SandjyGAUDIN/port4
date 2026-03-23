@@ -99,6 +99,7 @@ export function ContactSection() {
                 // disabled={isSubmitting}
                 className="w-full bg-blue-600 hover:bg-blue-700"
               >
+                  Envoyer le message
               </Button>
             </form>
           </div>
