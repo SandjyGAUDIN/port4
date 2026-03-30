@@ -31,10 +31,10 @@ export default function Propos() {
           <h2 className="text-4xl font-bold text-white tracking-tight">À propos de moi</h2> 
           <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
             <p>
-              Actuellement étudiant en <strong>BUT Informatique</strong> (parcours A : Réalisation d'applications) à l'IUT de Reims, je me spécialise dans le développement <strong>C# .NET</strong> et les technologies <strong>Web modernes</strong>.
+              Actuellement étudiant en <strong>BUT Informatique</strong> (parcours A : Réalisation d&apos;applications) à l&apos;IUT de Reims, je me spécialise dans le développement <strong>C# .NET</strong> et les technologies <strong>Web modernes</strong>.
             </p>
             <p>
-              Mon approche repose sur la création de solutions logicielles personnalisées, robustes et centrées sur l&apos;utilisateur. Passionné par l'architecture logicielle, j&apos;aime transformer des besoins complexes en interfaces simples et efficaces.
+              Mon approche repose sur la création de solutions logicielles personnalisées, robustes et centrées sur l&apos;utilisateur. Passionné par l&apos;architecture logicielle, j&apos;aime transformer des besoins complexes en interfaces simples et efficaces.
             </p>
           </div>
         </div>
