@@ -41,6 +41,22 @@ export default function Propos() {
         </div>
       </div>
 
+      {/* SECTION : QU'EST-CE QUE LE BUT INFORMATIQUE (Réintégrée) */}
+      <div className="max-w-4xl mx-auto mt-12 px-6">
+        <h3 className="text-2xl font-bold text-white mb-6 border-b border-gray-700 pb-2">
+          Qu&apos;est-ce que le BUT Informatique ?
+        </h3>
+        
+        <div className="text-gray-300 space-y-4 leading-relaxed">
+          <p>
+            Diplôme professionnel de niveau 6 (bac + 3), le BUT informatique forme à la conception, la réalisation et la mise en œuvre de solutions informatiques répondant aux besoins de transformation numérique des entreprises. La formation transmet des savoirs fondamentaux en développement informatique et Web, dans les langages de programmation les plus utilisés, dans l’administration des systèmes et réseaux, dans les bases de données et en conduite de projets.
+          </p>
+          <p>
+            Le parcours réalisation d’applications - conception, développement, validation (parcours A) forme des informaticiens cadres intermédiaires en informatique. Les élèves acquièrent les compétences nécessaires pour développer des applications complexes, en réaliser la maintenance ou le suivi. Ils apprennent à mettre en place des tests, à automatiser leur exécution et à assurer l’intégration continue des applications. Ces dernières peuvent concerner des plateformes spécifiques (Web, mobile, Iot…) et des domaines variés (finance, santé, jeu vidéo…). Après le BUT, les débouchés se situent principalement dans les entreprises et autres organisations (entreprise de services du numérique, ESN, télécommunications, banques, assurances, grande distribution, plateformes de e-commerce, industries, services publics, éditeurs de logiciels…).
+          </p>
+        </div>
+      </div>
+
       <div className="max-w-4xl mx-auto mt-20 px-6 space-y-16">
         
         {/* SECTION : PARCOURS PROFESSIONNEL */}
