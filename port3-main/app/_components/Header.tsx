@@ -47,7 +47,7 @@ export const Header = () => {
     const navLinks = [
         { name: "Accueil", href: "#Accueil" },
         { name: "À propos", href: "#Propos" },
-        { name: "Compétences", href: "#Competences" }, // Libellé raccourci pour gagner de la place
+        { name: "Stack technique", href: "#Competences" }, // Libellé raccourci pour gagner de la place
         { name: "Réalisations", href: "#E5" },       // Libellé raccourci
         { name: "Contact", href: "#Contact" },
     ];
@@ -91,7 +91,7 @@ export const Header = () => {
 
                 {/* Social/Action Button */}
                 <div className="hidden sm:flex items-center ml-4">
-                    <Link href="https://github.com" target="_blank">
+                    <Link href="https://https://github.com/SandjyGAUDIN" target="_blank">
                         <Button variant="ghost" size="sm" className="px-3">
                             <GithubIcon size={18} />
                         </Button>
