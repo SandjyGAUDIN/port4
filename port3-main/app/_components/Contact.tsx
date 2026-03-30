@@ -30,7 +30,7 @@ export function ContactSection() {
                 <label htmlFor="message" className="block text-sm font-medium mb-2">Votre message</label>
                 <Textarea id="message" rows={5} className="bg-gray-700 border-gray-600 text-white" disabled />
               </div>
-              <Button className="w-full bg-blue-600/50 cursor-not-allowed">Envoyer</Button>
+              <Button className="w-full bg-blue-600/50 text-white cursor-not-allowed">Envoyer</Button>
             </form>
           </div>
 
