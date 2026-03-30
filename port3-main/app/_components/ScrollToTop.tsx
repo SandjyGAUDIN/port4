@@ -1,14 +1,12 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Gérer la visibilité du bouton selon le défilement
   useEffect(() => {
     const toggleVisibility = () => {
-      // On affiche le bouton si on a descendu de plus de 300px
       if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
@@ -23,7 +21,7 @@ const ScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Animation fluide
+      behavior: "smooth",
     });
   };
 
@@ -34,28 +32,32 @@ const ScrollToTop = () => {
           onClick={scrollToTop}
           style={styles.button}
           aria-label="Retour en haut"
-        ) : (
-          null
-        )}
-      </>
+        >
+          ↑
+        </button>
+      )}
+    </>
   );
 };
 
-// Petit exemple de styles rapides (à adapter avec Tailwind ou CSS Modules)
-const styles = {
+const styles: { [key: string]: React.CSSProperties } = {
   button: {
     position: 'fixed',
     bottom: '40px',
     right: '40px',
-    padding: '10px 15px',
-    fontSize: '20px',
+    width: '50px',
+    height: '50px',
+    fontSize: '24px',
     backgroundColor: '#0070f3',
     color: 'white',
     border: 'none',
     borderRadius: '50%',
     cursor: 'pointer',
-    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
     zIndex: 1000,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 };
 
