@@ -102,6 +102,7 @@ export default function Propos() {
                     <p className="text-gray-300 mt-2">
                         Solutions Logicielles et Applications Métiers. Apprentissage des fondamentaux du développement, de la gestion de base de données et de l&apos;algorithmie.
                     </p>
+                    <a href="https://www.lyc-honore-d-estienne-d-orves.ac-nice.fr" target="_blank" className="text-xs text-blue-400 hover:underline mt-2 inline-block">Consulter le site de l&apos;école →</a>
                 </div>
 
                 {/* Bac STI2D */}
@@ -110,9 +111,10 @@ export default function Propos() {
                     <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">2023</span>
                     <h4 className="text-xl font-bold text-white mt-1">Baccalauréat STI2D</h4>
                     <p className="text-gray-400">Lycée Franklin Roosevelt, Reims</p>
-                    <p className="text-gray-300 mt-2 italic text-sm">
+                    <p className="text-gray-300 mt-2 text-sm">
                         Spécialité Systèmes d&apos;Information et Numérique (SIN). Obtenu avec mention.
                     </p>
+                    <a href="https://lycee-roosevelt-reims.fr" target="_blank" className="text-xs text-blue-400 hover:underline mt-2 inline-block">Consulter le site de l&apos;école →</a>
                 </div>
             </div>
         </div>
