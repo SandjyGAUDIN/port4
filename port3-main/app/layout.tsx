@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "./_components/ScrollToTop";
+<meta name="google-site-verification" content="jLbmH3gktu9BjIF4zDv3IoCVTIOM8dD7Cot4BDsJdo8" />
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,12 @@ export const metadata: Metadata = {
   description: "Découvrez le portfolio de Sandjy Gaudin, développeur passionné à Reims. Spécialisé en C#, Web, Next.js et Laravel. Étudiant en BUT Informatique.",
   keywords: ["Sandjy Gaudin", "Développeur Reims", "Portfolio Sandjy Gaudin", "BUT Informatique", "Développeur C#", "Développeur Web"],
   authors: [{ name: "Sandjy Gaudin" }],
-  // Favicon et icônes
+
+  // Ajout de la vérification Google Search Console
+  verification: {
+    google: "jLbmH3gktu9BjIF4zDv3IoCVTIOM8dD7Cot4BDsJdo8",
+  },
+
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
