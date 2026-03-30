@@ -47,18 +47,17 @@ export const Header = () => {
     const navLinks = [
         { name: "Accueil", href: "#Accueil" },
         { name: "À propos", href: "#Propos" },
-        { name: "Stack technique", href: "#Competences" }, // Libellé raccourci pour gagner de la place
-        { name: "Réalisations", href: "#E5" },       // Libellé raccourci
+        { name: "Compétences", href: "#Competences" },
+        { name: "Réalisations", href: "#E5" },
         { name: "Contact", href: "#Contact" },
     ];
 
     return (
         <header className="sticky top-0 w-full py-4 bg-background/80 backdrop-blur-md z-50 border-b border-secondary/50">
             <Section className="flex items-center justify-between gap-4">
-                {/* Logo Section */}
                 <div className="relative min-w-[150px] h-8 flex items-center">
                     <AnimatePresence mode="wait">
-                        <motion.h1
+                        <motion.div
                             key={currentIndex}
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -67,11 +66,10 @@ export const Header = () => {
                             className="text-xl font-bold tracking-tight whitespace-nowrap"
                         >
                             {texts[currentIndex]}
-                        </motion.h1>
+                        </motion.div>
                     </AnimatePresence>
                 </div>
                 
-                {/* Desktop Nav */}
                 <nav className="hidden lg:flex items-center flex-1 justify-end">
                     <ul className="flex items-center gap-8">
                         {navLinks.map((link) => (
@@ -89,27 +87,25 @@ export const Header = () => {
                     </ul>
                 </nav>
 
-                {/* Social/Action Button */}
                 <div className="hidden sm:flex items-center ml-4">
-                    <Link href="https://https://github.com/SandjyGAUDIN" target="_blank">
+                    <Link href="https://github.com/SandjyGAUDIN" target="_blank" aria-label="GitHub de Sandjy Gaudin">
                         <Button variant="ghost" size="sm" className="px-3">
                             <GithubIcon size={18} />
                         </Button>
                     </Link>
                 </div>
 
-                {/* Mobile Menu Trigger */}
                 <Button 
                     variant="ghost" 
                     size="icon" 
                     className="lg:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Ouvrir le menu"
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </Button>
             </Section>
 
-            {/* Mobile Menu Overlay */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div 
@@ -129,9 +125,11 @@ export const Header = () => {
                                     {link.name}
                                 </Link>
                             ))}
-                            <hr />
-                            <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                                <GithubIcon size={18} className="mr-2" /> GitHub
+                            <hr className="border-gray-800" />
+                            <Button asChild className="w-full bg-blue-600 hover:bg-blue-700">
+                                <Link href="https://github.com/SandjyGAUDIN" target="_blank">
+                                    <GithubIcon size={18} className="mr-2" /> GitHub
+                                </Link>
                             </Button>
                         </Section>
                     </motion.div>

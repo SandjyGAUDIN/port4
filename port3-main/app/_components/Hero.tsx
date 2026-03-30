@@ -10,10 +10,8 @@ export default function CompactHero() {
 
   useEffect(() => {
     let currentIndex = isDeleting ? text.length : 0;
-
     const animateText = () => {
       setDisplayedText(text.substring(0, currentIndex));
-      
       if (!isDeleting && currentIndex < text.length) {
         currentIndex++;
         timeoutRef.current = setTimeout(animateText, 100);
@@ -25,43 +23,36 @@ export default function CompactHero() {
         timeoutRef.current = setTimeout(animateText, isDeleting ? 1000 : 2000);
       }
     };
-
     timeoutRef.current = setTimeout(animateText, 500);
-
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
   }, [isDeleting]);
 
   return (
-    <div className="bg-blue-700 px-6 py-8">
-      <div className="max-w-5xl mx-auto flex items-center justify-between">
-        {/* Texte aligné à gauche */}
-        <div className="flex-1">
-          <h1 className="text-2xl font-semibold text-white">
+    <section id="Accueil" className="bg-blue-700 px-6 py-12 md:py-16">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
             Sandjy GAUDIN
           </h1>
-          <div className="text-lg text-blue-100 min-h-[24px] mt-1">
+          <h2 className="text-xl text-blue-100 min-h-[28px] font-medium">
             {displayedText}
             <span className="animate-pulse">|</span>
-          </div>
+          </h2>
+          <p className="mt-4 text-blue-100/80 max-w-lg">
+            Développeur passionné basé à Reims, spécialisé dans la création d'applications robustes et d'interfaces web modernes.
+          </p>
         </div>
 
-        {/* Photo alignée à droite - taille réduite */}
-        <div className="ml-5 w-23 h-26 rounded-full overflow-hidden border-2 border-white">
-        <Image
-          src="/Images/Sandjyphoto.png"
-          alt="Portrait"
-          width={96}
-          height={96}
-          className="object-cover"
-          priority
-        />
-          <div className="w-full h-full bg-blue-500 flex items-center justify-center">
-            <span className="text-white text-xs">PHOTO</span>
-          </div>    
+        <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+          <Image
+            src="/Images/Sandjyphoto.png"
+            alt="Photo de profil de Sandjy Gaudin - Développeur Informatique"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
