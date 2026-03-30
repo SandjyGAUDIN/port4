@@ -11,7 +11,7 @@ export function ContactSection() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-4">Contactez-moi</h2>
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16">
-          Une opportunité, une question ou simplement envie d'échanger sur un projet ? Je suis à votre écoute.
+          Une opportunité, une question ou simplement envie d&apos;échanger sur un projet ? Je suis à votre écoute.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

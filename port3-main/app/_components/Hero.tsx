@@ -39,7 +39,7 @@ export default function CompactHero() {
             <span className="animate-pulse">|</span>
           </h2>
           <p className="mt-4 text-blue-100/80 max-w-lg">
-            Développeur passionné basé à Reims, spécialisé dans la création d'applications robustes et d'interfaces web modernes.
+            Développeur passionné basé à Reims, spécialisé dans la création d&apos;applications robustes et d&apos;interfaces web modernes.
           </p>
         </div>
 

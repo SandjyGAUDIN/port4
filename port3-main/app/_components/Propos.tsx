@@ -1,11 +1,9 @@
 'use client';
-import { Section } from "./Section"; // Réutilise ton composant de structure si tu en as un
 
 export default function Propos() {
   return (
     <section id="Propos" className="min-h-screen py-24 bg-gray-900 text-gray-100">
       <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row gap-12">
-        {/* Colonne Gauche : CV */}
         <div className="md:w-1/3">
           <div className="sticky top-24">
             <div className="relative group">
@@ -36,7 +34,7 @@ export default function Propos() {
               Actuellement étudiant en <strong>BUT Informatique</strong> (parcours A : Réalisation d'applications) à l'IUT de Reims, je me spécialise dans le développement <strong>C# .NET</strong> et les technologies <strong>Web modernes</strong>.
             </p>
             <p>
-              Mon approche repose sur la création de solutions logicielles personnalisées, robustes et centrées sur l'utilisateur. Passionné par l'architecture logicielle, j'aime transformer des besoins complexes en interfaces simples et efficaces.
+              Mon approche repose sur la création de solutions logicielles personnalisées, robustes et centrées sur l&apos;utilisateur. Passionné par l'architecture logicielle, j&apos;aime transformer des besoins complexes en interfaces simples et efficaces.
             </p>
           </div>
         </div>
@@ -58,7 +56,7 @@ export default function Propos() {
                     <h4 className="text-xl font-bold text-white mt-1">Stage Développeur - LICIIS (URCA)</h4>
                     <p className="text-gray-400 mb-3">Reims, France</p>
                     <p className="text-gray-300 leading-relaxed">
-                        Mise en place et personnalisation d'une instance <strong>WorkAdventure</strong>. Rédaction du cahier des charges, correction de bugs et déploiement sur serveurs locaux.
+                        Mise en place et personnalisation d&apos;une instance <strong>WorkAdventure</strong>. Rédaction du cahier des charges, correction de bugs et déploiement sur serveurs locaux.
                     </p>
                 </div>
 
@@ -68,7 +66,7 @@ export default function Propos() {
                     <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">2023 - 2024</span>
                     <h4 className="text-xl font-bold text-white mt-1">Stage Webmaster - LICIIS (URCA)</h4>
                     <p className="text-gray-300 leading-relaxed">
-                        Création d'un site institutionnel sous <strong>WordPress</strong>. Développement de deux plugins PHP sur-mesure (Intégration API HAL et Réseaux Sociaux).
+                        Création d&apos;un site vitrine sous <strong>WordPress</strong>. Développement de deux plugins PHP sur-mesure (Intégration API HAL et Réseaux Sociaux).
                     </p>
                 </div>
             </div>
