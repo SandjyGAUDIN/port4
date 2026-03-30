@@ -32,10 +32,10 @@ export default function Propos() {
           <h2 className="text-4xl font-bold text-white tracking-tight">À propos de moi</h2> 
           <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
             <p>
-              Actuellement étudiant en <strong>BUT Informatique</strong> (parcours A : Réalisation d'applications) à l'IUT de Reims, je me spécialise dans le développement <strong>C# .NET</strong> et les technologies <strong>Web modernes</strong>.
+              Actuellement étudiant en <strong>BUT Informatique</strong> (parcours A : Réalisation d&apos;applications) à l&apos;IUT de Reims, je me spécialise dans le développement <strong>C# .NET</strong> et les technologies <strong>Web modernes</strong>.
             </p>
             <p>
-              Mon approche repose sur la création de solutions logicielles personnalisées, robustes et centrées sur l'utilisateur. Passionné par l'architecture logicielle, j'aime transformer des besoins complexes en interfaces simples et efficaces.
+              Mon approche repose sur la création de solutions logicielles personnalisées, robustes et centrées sur l&apos;utilisateur. Passionné par l&apos;architecture logicielle, j&apos;aime transformer des besoins complexes en interfaces simples et efficaces.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Propos() {
                     <h4 className="text-xl font-bold text-white mt-1">Stage Développeur - LICIIS (URCA)</h4>
                     <p className="text-gray-400 mb-3 underline decoration-dotted">Reims, France</p>
                     <p className="text-gray-300 leading-relaxed">
-                        Mise en place et personnalisation d'une instance <strong>WorkAdventure</strong>. Rédaction du cahier des charges, correction de bugs et déploiement sur serveurs locaux.
+                        Mise en place et personnalisation d&apos;une instance <strong>WorkAdventure</strong>. Rédaction du cahier des charges, correction de bugs et déploiement sur serveurs locaux.
                     </p>
                 </div>
 
@@ -68,7 +68,7 @@ export default function Propos() {
                     <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">2023 - 2024</span>
                     <h4 className="text-xl font-bold text-white mt-1">Stage Développement WEB - LICIIS (URCA)</h4>
                     <p className="text-gray-300 leading-relaxed">
-                        Création d'un site vitrine sous <strong>WordPress</strong>. Développement de deux plugins PHP sur-mesure pour l'intégration de flux de recherche (API HAL) et réseaux sociaux.
+                        Création d&apos;un site vitrine sous <strong>WordPress</strong>. Développement de deux plugins PHP sur-mesure pour l&apos;intégration de flux de recherche (API HAL) et réseaux sociaux.
                     </p>
                 </div>
             </div>
@@ -88,9 +88,9 @@ export default function Propos() {
                     <span className="text-green-400 text-sm font-bold uppercase tracking-wider">2025 - 2026 (En cours)</span>
                     <h4 className="text-xl font-bold text-white mt-1 underline underline-offset-4 decoration-blue-500">BUT Informatique - IUT de Reims</h4>
                     <p className="text-gray-300 mt-2">
-                        Parcours <strong>Réalisation d'applications</strong> : conception, développement et validation. Spécialisation web et logiciel.
+                        Parcours <strong>Réalisation d&apos;applications</strong> : conception, développement et validation. Spécialisation web et logiciel.
                     </p>
-                    <a href="https://www.iut-rcc.fr" target="_blank" className="text-xs text-blue-400 hover:underline mt-2 inline-block">Consulter le site de l'école →</a>
+                    <a href="https://www.iut-rcc.fr" target="_blank" className="text-xs text-blue-400 hover:underline mt-2 inline-block">Consulter le site de l&apos;école →</a>
                 </div>
 
                 {/* BTS SIO */}
@@ -98,9 +98,9 @@ export default function Propos() {
                     <div className="absolute -left-[9px] top-0 w-4 h-4 bg-gray-700 rounded-full"></div>
                     <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">2023 - 2025</span>
                     <h4 className="text-xl font-bold text-white mt-1">BTS SIO Option SLAM</h4>
-                    <p className="text-gray-400">Lycée Honoré d'Estienne d'Orves, Nice</p>
+                    <p className="text-gray-400">Lycée Honoré d&apos;Estienne d&apos;Orves, Nice</p>
                     <p className="text-gray-300 mt-2">
-                        Solutions Logicielles et Applications Métiers. Apprentissage des fondamentaux du développement, de la gestion de base de données et de l'algorithmie.
+                        Solutions Logicielles et Applications Métiers. Apprentissage des fondamentaux du développement, de la gestion de base de données et de l&apos;algorithmie.
                     </p>
                 </div>
 
@@ -111,7 +111,7 @@ export default function Propos() {
                     <h4 className="text-xl font-bold text-white mt-1">Baccalauréat STI2D</h4>
                     <p className="text-gray-400">Lycée Franklin Roosevelt, Reims</p>
                     <p className="text-gray-300 mt-2 italic text-sm">
-                        Spécialité Systèmes d'Information et Numérique (SIN). Obtenu avec mention.
+                        Spécialité Systèmes d&apos;Information et Numérique (SIN). Obtenu avec mention.
                     </p>
                 </div>
             </div>
