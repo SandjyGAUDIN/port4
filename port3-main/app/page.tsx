@@ -11,7 +11,6 @@ export default function Home() {
   return (
   <main>
     <Header />
-
     <section id="Accueil">
     <Hero />
     </section>
