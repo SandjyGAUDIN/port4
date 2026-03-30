@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Section } from "./Section";
@@ -15,8 +15,8 @@ export const Header = () => {
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     
     const texts = [
-        <span key="portfolio">Port<span className="text-blue-700">folio.</span></span>,
-        <span key="name">Sandjy <span className="text-blue-700">Gaudin.</span></span>
+        <span key="portfolio">Port<span className="text-blue-600">folio.</span></span>,
+        <span key="name">Sandjy <span className="text-blue-600">Gaudin.</span></span>
     ];
 
     useEffect(() => {
@@ -26,90 +26,117 @@ export const Header = () => {
                 cycleTexts();
             }, 5000);
         };
-
         cycleTexts();
-        return () => {
-            if (timeoutRef.current) {
-                clearTimeout(timeoutRef.current);
-            }
-        };
+        return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
     }, [texts.length]);
 
     const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, hash: string) => {
         e.preventDefault();
-        
         if (pathname === '/') {
             const element = document.getElementById(hash.replace('#', ''));
             if (element) {
-                window.scrollTo({
-                    top: element.offsetTop - 100,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: element.offsetTop - 80, behavior: 'smooth' });
                 window.history.pushState(null, '', hash);
             }
         } else {
             window.location.href = `/${hash}`;
         }
-        
         setIsMenuOpen(false);
     };
 
+    const navLinks = [
+        { name: "Accueil", href: "#Accueil" },
+        { name: "À propos", href: "#Propos" },
+        { name: "Compétences", href: "#Competences" }, // Libellé raccourci pour gagner de la place
+        { name: "Réalisations", href: "#E5" },       // Libellé raccourci
+        { name: "Contact", href: "#Contact" },
+    ];
+
     return (
-        <header className="sticky top-0 py-3 bg-background z-50 border-b">
-            <Section className="flex items-center justify-between">
-                <Link href="/" className="min-w-[180px] h-8 flex items-center justify-start overflow-hidden">
+        <header className="sticky top-0 w-full py-4 bg-background/80 backdrop-blur-md z-50 border-b border-secondary/50">
+            <Section className="flex items-center justify-between gap-4">
+                {/* Logo Section */}
+                <div className="relative min-w-[150px] h-8 flex items-center">
                     <AnimatePresence mode="wait">
                         <motion.h1
                             key={currentIndex}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.5, ease: "easeInOut" }}
-                            className="text-lg font-geist-mono text-primary whitespace-nowrap absolute"
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: 10 }}
+                            transition={{ duration: 0.4 }}
+                            className="text-xl font-bold tracking-tight whitespace-nowrap"
                         >
                             {texts[currentIndex]}
                         </motion.h1>
                     </AnimatePresence>
-                </Link>
+                </div>
                 
-                {/* Version PC */}
-                <nav className="hidden sm:flex items-center gap-4">
-                    <ul className="flex gap-12">
-                        <li><Link href="/#Accueil" onClick={(e) => handleNavigation(e, '#Accueil')} className="text-[15px] hover:text-blue-500">Accueil</Link></li>
-                        <li><Link href="/#Propos" onClick={(e) => handleNavigation(e, '#Propos')} className="text-[15px] hover:text-blue-500">À propos</Link></li>
-                        <li><Link href="/#Competences" onClick={(e) => handleNavigation(e, '#Competences')} className="text-[15px] hover:text-blue-500">Stack technique et applications</Link></li>
-                        <li><Link href="/#E5" onClick={(e) => handleNavigation(e, '#E5')} className="text-[15px] hover:text-blue-500">Mes réalisations</Link></li>
-                        <li><Link href="/#Contact" onClick={(e) => handleNavigation(e, '#Contact')} className="text-[15px] hover:text-blue-500">Contact</Link></li>
+                {/* Desktop Nav */}
+                <nav className="hidden lg:flex items-center flex-1 justify-end">
+                    <ul className="flex items-center gap-8">
+                        {navLinks.map((link) => (
+                            <li key={link.name}>
+                                <Link 
+                                    href={`/${link.href}`} 
+                                    onClick={(e) => handleNavigation(e, link.href)}
+                                    className="text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors relative group"
+                                >
+                                    {link.name}
+                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
-                {/* Bouton hamburger */}
+                {/* Social/Action Button */}
+                <div className="hidden sm:flex items-center ml-4">
+                    <Link href="https://github.com" target="_blank">
+                        <Button variant="ghost" size="sm" className="px-3">
+                            <GithubIcon size={18} />
+                        </Button>
+                    </Link>
+                </div>
+
+                {/* Mobile Menu Trigger */}
                 <Button 
                     variant="ghost" 
                     size="icon" 
-                    className="sm:hidden"
+                    className="lg:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </Button>
             </Section>
 
-            {/* Menu mobile */}
-            {isMenuOpen && (
-                <div className="sm:hidden bg-background border-t">
-                    <Section className="flex flex-col py-4 space-y-3">
-                        <Link href="/#Accueil" onClick={(e) => handleNavigation(e, '#Accueil')} className="py-2 px-4 hover:bg-gray-100 rounded">Accueil</Link>
-                        <Link href="/#Propos" onClick={(e) => handleNavigation(e, '#Propos')} className="py-2 px-4 hover:bg-gray-100 rounded">À propos</Link>
-                        <Link href="/#Competences" onClick={(e) => handleNavigation(e, '#Competences')} className="py-2 px-4 hover:bg-gray-100 rounded">Stack technique et applications</Link>
-                        <Link href="/#E5" onClick={(e) => handleNavigation(e, '#E5')} className="py-2 px-4 hover:bg-gray-100 rounded">Mes réalisations</Link>
-                        <Link href="/#Contact" onClick={(e) => handleNavigation(e, '#Contact')} className="py-2 px-4 hover:bg-gray-100 rounded">Contact</Link>
-                        <Button variant="outline" className="mt-2">
-                            <GithubIcon size={16} className="mr-2" />
-                            GitHub
-                        </Button>
-                    </Section>
-                </div>
-            )}
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div 
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="lg:hidden bg-background border-t overflow-hidden"
+                    >
+                        <Section className="flex flex-col py-6 gap-4">
+                            {navLinks.map((link) => (
+                                <Link 
+                                    key={link.name}
+                                    href={`/${link.href}`} 
+                                    onClick={(e) => handleNavigation(e, link.href)} 
+                                    className="text-lg font-medium hover:text-blue-600"
+                                >
+                                    {link.name}
+                                </Link>
+                            ))}
+                            <hr />
+                            <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                                <GithubIcon size={18} className="mr-2" /> GitHub
+                            </Button>
+                        </Section>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 };
